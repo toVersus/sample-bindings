@@ -88,7 +88,7 @@ func (s addressableServiceNamespaceLister) Get(name string) (*v1alpha1.Addressab
 		return nil, err
 	}
 	if !exists {
-		return nil, errors.NewNotFound(v1alpha1.Resource("addressableservice"), name)
+		return nil, errors.NewNotFound(v1alpha1.Resource("databaseservice"), name)
 	}
 	return obj.(*v1alpha1.AddressableService), nil
 }

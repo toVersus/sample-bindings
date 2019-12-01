@@ -17,9 +17,9 @@ kind: Service
 metadata:
   labels:
     role: webhook
-    samples.knative.dev/release: devel
+    bindings.toversus.dev/release: devel
   name: webhook
-  namespace: knative-samples
+  namespace: knative-bindings
 spec:
   ports:
     - port: 443

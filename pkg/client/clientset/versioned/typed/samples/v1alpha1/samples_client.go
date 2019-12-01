@@ -29,7 +29,7 @@ type SamplesV1alpha1Interface interface {
 	AddressableServicesGetter
 }
 
-// SamplesV1alpha1Client is used to interact with features provided by the samples.knative.dev group.
+// SamplesV1alpha1Client is used to interact with features provided by the bindings.knative.dev group.
 type SamplesV1alpha1Client struct {
 	restClient rest.Interface
 }

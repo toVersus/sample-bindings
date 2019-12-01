@@ -1,5 +1,5 @@
 /*
-Copyright 2019 The Knative Authors
+Copyright 2019 The Knative Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -14,18 +14,16 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package main
+package v1alpha1
 
 import (
-	// The set of controllers this controller process runs.
-	"knative.dev/sample-controller/pkg/reconciler/addressableservice"
-
-	// This defines the shared main for injected controllers.
-	"knative.dev/pkg/injection/sharedmain"
+	"context"
 )
 
-func main() {
-	sharedmain.Main("controller",
-		addressableservice.NewController,
-	)
+// SetDefaults implements apis.Defaultable
+func (ds *DatabaseBinding) SetDefaults(ctx context.Context) {
+	if ds.Spec.Subject.Namespace == "" {
+		// Default the subject's namespace to our namespace.
+		ds.Spec.Subject.Namespace = ds.Namespace
+	}
 }

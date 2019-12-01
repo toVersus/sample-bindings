@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package addressableservice
+package databaseservice
 
 import (
 	"context"
@@ -33,7 +33,7 @@ import (
 )
 
 const (
-	controllerAgentName = "addressableservice-controller"
+	controllerAgentName = "databaseservice-controller"
 )
 
 // NewController returns a new HPA reconcile controller.

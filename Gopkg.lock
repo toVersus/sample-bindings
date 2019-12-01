@@ -1039,6 +1039,33 @@
 
 [[projects]]
   branch = "master"
+  digest = "1:5fc835d6cec51dfc9471c9a34fb1caadb095e2dd8840e99883bfa11976dc271a"
+  name = "knative.dev/sample-controller"
+  packages = [
+    "pkg/apis/samples",
+    "pkg/apis/samples/v1alpha1",
+    "pkg/client/clientset/versioned",
+    "pkg/client/clientset/versioned/fake",
+    "pkg/client/clientset/versioned/scheme",
+    "pkg/client/clientset/versioned/typed/samples/v1alpha1",
+    "pkg/client/clientset/versioned/typed/samples/v1alpha1/fake",
+    "pkg/client/informers/externalversions",
+    "pkg/client/informers/externalversions/internalinterfaces",
+    "pkg/client/informers/externalversions/samples",
+    "pkg/client/informers/externalversions/samples/v1alpha1",
+    "pkg/client/injection/client",
+    "pkg/client/injection/client/fake",
+    "pkg/client/injection/informers/factory",
+    "pkg/client/injection/informers/factory/fake",
+    "pkg/client/injection/informers/samples/v1alpha1/addressableservice",
+    "pkg/client/listers/samples/v1alpha1",
+    "pkg/reconciler/addressableservice",
+  ]
+  pruneopts = "NUT"
+  revision = "6c513010178191b1d76e3af02539dfe09b7c1b11"
+
+[[projects]]
+  branch = "master"
   digest = "1:85fe0cadd6ab83f3d7f948c60b6d422dc9cd16664246249968dab5d828ae8dfd"
   name = "knative.dev/test-infra"
   packages = [
@@ -1087,6 +1114,7 @@
     "k8s.io/code-generator/cmd/informer-gen",
     "k8s.io/code-generator/cmd/lister-gen",
     "knative.dev/pkg/apis",
+    "knative.dev/pkg/apis/duck/v1",
     "knative.dev/pkg/apis/duck/v1beta1",
     "knative.dev/pkg/client/injection/kube/informers/core/v1/service",
     "knative.dev/pkg/codegen/cmd/injection-gen",
@@ -1107,6 +1135,24 @@
     "knative.dev/pkg/webhook/resourcesemantics",
     "knative.dev/pkg/webhook/resourcesemantics/defaulting",
     "knative.dev/pkg/webhook/resourcesemantics/validation",
+    "knative.dev/sample-controller/pkg/apis/samples",
+    "knative.dev/sample-controller/pkg/apis/samples/v1alpha1",
+    "knative.dev/sample-controller/pkg/client/clientset/versioned",
+    "knative.dev/sample-controller/pkg/client/clientset/versioned/fake",
+    "knative.dev/sample-controller/pkg/client/clientset/versioned/scheme",
+    "knative.dev/sample-controller/pkg/client/clientset/versioned/typed/samples/v1alpha1",
+    "knative.dev/sample-controller/pkg/client/clientset/versioned/typed/samples/v1alpha1/fake",
+    "knative.dev/sample-controller/pkg/client/informers/externalversions",
+    "knative.dev/sample-controller/pkg/client/informers/externalversions/internalinterfaces",
+    "knative.dev/sample-controller/pkg/client/informers/externalversions/samples",
+    "knative.dev/sample-controller/pkg/client/informers/externalversions/samples/v1alpha1",
+    "knative.dev/sample-controller/pkg/client/injection/client",
+    "knative.dev/sample-controller/pkg/client/injection/client/fake",
+    "knative.dev/sample-controller/pkg/client/injection/informers/factory",
+    "knative.dev/sample-controller/pkg/client/injection/informers/factory/fake",
+    "knative.dev/sample-controller/pkg/client/injection/informers/samples/v1alpha1/addressableservice",
+    "knative.dev/sample-controller/pkg/client/listers/samples/v1alpha1",
+    "knative.dev/sample-controller/pkg/reconciler/addressableservice",
     "knative.dev/test-infra/scripts",
     "knative.dev/test-infra/tools/dep-collector",
   ]

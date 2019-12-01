@@ -46,7 +46,7 @@ func Get(ctx context.Context) v1alpha1.AddressableServiceInformer {
 	untyped := ctx.Value(Key{})
 	if untyped == nil {
 		logging.FromContext(ctx).Panic(
-			"Unable to fetch knative.dev/sample-controller/pkg/client/informers/externalversions/samples/v1alpha1.AddressableServiceInformer from context.")
+			"Unable to fetch knative.dev/sample-controller/pkg/client/informers/externalversions/bindings/v1alpha1.AddressableServiceInformer from context.")
 	}
 	return untyped.(v1alpha1.AddressableServiceInformer)
 }

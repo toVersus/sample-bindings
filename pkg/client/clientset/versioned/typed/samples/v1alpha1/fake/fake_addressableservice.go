@@ -34,9 +34,9 @@ type FakeAddressableServices struct {
 	ns   string
 }
 
-var addressableservicesResource = schema.GroupVersionResource{Group: "samples.knative.dev", Version: "v1alpha1", Resource: "addressableservices"}
+var addressableservicesResource = schema.GroupVersionResource{Group: "bindings.knative.dev", Version: "v1alpha1", Resource: "addressableservices"}
 
-var addressableservicesKind = schema.GroupVersionKind{Group: "samples.knative.dev", Version: "v1alpha1", Kind: "AddressableService"}
+var addressableservicesKind = schema.GroupVersionKind{Group: "bindings.knative.dev", Version: "v1alpha1", Kind: "AddressableService"}
 
 // Get takes name of the addressableService, and returns the corresponding addressableService object, and an error if there is any.
 func (c *FakeAddressableServices) Get(name string, options v1.GetOptions) (result *v1alpha1.AddressableService, err error) {

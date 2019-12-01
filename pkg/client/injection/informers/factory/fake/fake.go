@@ -21,11 +21,11 @@ package fake
 import (
 	"context"
 
+	externalversions "github.com/toversus/sample-bindings/pkg/client/informers/externalversions"
+	fake "github.com/toversus/sample-bindings/pkg/client/injection/client/fake"
+	factory "github.com/toversus/sample-bindings/pkg/client/injection/informers/factory"
 	controller "knative.dev/pkg/controller"
 	injection "knative.dev/pkg/injection"
-	externalversions "knative.dev/sample-controller/pkg/client/informers/externalversions"
-	fake "knative.dev/sample-controller/pkg/client/injection/client/fake"
-	factory "knative.dev/sample-controller/pkg/client/injection/informers/factory"
 )
 
 var Get = factory.Get

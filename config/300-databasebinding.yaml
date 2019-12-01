@@ -15,29 +15,26 @@
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
-  name: addressableservices.samples.knative.dev
+  name: databasebinding.bindings.toversus.dev
   labels:
-    samples.knative.dev/release: devel
-    knative.dev/crd-install: "true"
+    bindings.toversus.dev/release: devel
+    toversus.dev/crd-install: "true"
 spec:
-  group: samples.knative.dev
+  group: bindings.toversus.dev
   version: v1alpha1
   names:
-    kind: AddressableService
-    plural: addressableservices
-    singular: addressableservice
+    kind: DatabaseBinding
+    plural: databasebindings
+    singular: databasebindings
     categories:
     - all
-    - knative
+    - toversus
     shortNames:
-    - asvc
+    - dbb
   scope: Namespaced
   subresources:
     status: {}
   additionalPrinterColumns:
-  - name: Address
-    type: string
-    JSONPath: .status.address.url
   - name: Ready
     type: string
     JSONPath: ".status.conditions[?(@.type=='Ready')].status"

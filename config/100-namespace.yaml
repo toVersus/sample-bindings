@@ -15,7 +15,8 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: knative-samples
+  name: binding-system
   labels:
     istio-injection: enabled
-    samples.knative.dev/release: devel
+    bindings.toversus.dev/release: devel
+    bindings.mattmoor.dev/exclude: "true"
